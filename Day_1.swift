@@ -40,5 +40,18 @@
 //
 // Your actual left and right lists contain many location IDs. What is the total distance between your lists?
 //
+// from: https://adventofcode.com/2024/day/1
 
+import Foundation
+
+let inputFileName = #filePath.replacingOccurrences(of: ".swift", with: "_input.txt")
+
+let input = try! String(contentsOfFile: inputFileName, encoding: .utf8)
+
+let locationIDs = input.split(separator: "\n")
+    .compactMap(String.init)
+    .split(separator: "   ")
+    .compactMap(Int.init)
+
+print(type(of: locationIDs))
 
